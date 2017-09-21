@@ -1,0 +1,20 @@
+@import "bootstrap";
+
+
+.food-cart-tile {
+  border: 1px solid black;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.conversations {
+  margin-top: 2em;
+  ul {
+    list-style: none;
+  }
+}
+
+.conversation-tile {
+  border: 1px solid black;
+  padding: 1em;
+}

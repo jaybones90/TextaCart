@@ -1,0 +1,18 @@
+
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="conversations">
+      <% @conversations.each do |conversation| %>
+        <%= link_to conversation_path(conversation) do %>
+          <div class="conversation-tile">
+            <%= conversation.customer.phone_number %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-8">
+
+  </div>
+</div>
