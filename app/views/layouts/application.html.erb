@@ -22,7 +22,7 @@
             <p><%= link_to "Text Portal", conversations_path, class: "nav-link"%></p>
           </li>
           <li class="nav-item">
-            <p><%= link_to "Text Portal Sign-Out", destroy_user_session_path, class: "nav-link",   method: :delete if current_user %></p>
+            <p><%= link_to "Text Portal Sign-Out", destroy_user_session_path, class: "nav-link", :method => :delete if current_user %></p>
           </li>
           <li class="nav-item">
             <p><%= link_to "Admin", rails_admin_path, class: "nav-link"%></p>

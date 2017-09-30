@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'twilio-ruby'
 gem "paperclip", "~> 5.0.0"
 gem 'rails_admin', '~> 1.2'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -47,6 +48,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers'
+  gem 'dotenv-rails'
 end
 
 group :development do
