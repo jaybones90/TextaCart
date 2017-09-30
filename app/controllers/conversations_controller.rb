@@ -6,4 +6,13 @@ class ConversationsController < ApplicationController
     @conversations = food_cart.conversations
   end
 
+  def show
+    @conversation = Conversation.find(params[:id])
+    @message = @conversation.messages.new
+    respond_to do |format|
+      format.js
+      format.html
+    end
+  end
+
 end

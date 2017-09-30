@@ -1,18 +1,20 @@
 
 
-<div class="row portal">
-  <div class="col-md-4">
-    <div class="conversations">
-      <% @conversations.each do |conversation| %>
-        <%= link_to conversation_path(conversation) do %>
-          <div class="conversation-tile">
-            <%= conversation.customer.phone_number %>
-          </div>
-        <% end %>
-      <% end %>
+<div class="portal">
+  <div class="row conversations-container">
+    <!-- Conversations -->
+    <div class="col-sm-4">
+      <%= render 'conversations' %>
+    </div>
+    <!-- Messages -->
+    <div class="col-sm-8 messages-container">
+      <%= render 'messages' %>
     </div>
   </div>
-  <div class="col-md-8">
-
+  <!-- Reply  -->
+  <div class="row reply-container">
+    <div class="col-sm-12">
+  
+    </div>
   </div>
 </div>

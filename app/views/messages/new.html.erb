@@ -1,0 +1,8 @@
+<% if @conversation %>
+  <%= form_for [@conversation, @message] do |f| %>
+    <%= f.hidden_field :to_number, :value => @conversation.customer.phone_number %>
+    <%= f.hidden_field :from_number, :value => @conversation.food_cart.phone_number %>
+    <%= f.text_field :content %>
+    <%= f.submit "Send" %>
+  <% end %>
+<% end %>

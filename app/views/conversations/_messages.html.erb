@@ -1,0 +1,8 @@
+<div class="messages">
+  <% if @conversation %>
+    <% @conversation.messages.each do |message| %>
+      <p><%= message.from_number %></p>
+      <p><%= message.content %></p>
+    <% end %>
+  <% end %>
+</div>

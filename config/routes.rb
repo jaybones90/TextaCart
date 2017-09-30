@@ -5,14 +5,15 @@ Rails.application.routes.draw do
 
   root to: "food_carts#index"
 
-  resources :conversations, only: [:index, :show]
+  resources :conversations, only: [:index, :show] do
+    resources :messages
+  end
 
-  resources :messages do
+  resources :messages, only: [:receive] do
     collection do
       post 'receive'
-      # post 'reply'
-      # get 'reply'
-      # get 'text_interface'
+      post 'reply'
+      get 'reply'
     end
   end
 

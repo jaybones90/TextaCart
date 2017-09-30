@@ -25,10 +25,19 @@
 
 
 .portal {
-  margin-top: 5em;
-  border: 1px solid black;
-  height: 500px;
-   .col-md-4 {
+  .conversations-container {
+    margin-top: 3em;
+    border: 1px solid black;
+    height: 500px;
+  }
+   .col-sm-4 {
      padding: 0;
+   }
+   .reply-container {
+     border: 1px solid black;
+     height: 80px;
+   }
+   .messages-container {
+     overflow: scroll;
    }
 }

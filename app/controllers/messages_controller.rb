@@ -10,4 +10,15 @@ class MessagesController < ApplicationController
   end
 
 
+  def create
+    conversation = Conversation.find(params[:conversation_id])
+    message = conversation.messages.create!(message_params)
+    message.send_message
+  end
+
+private
+  def message_params
+    params.require(:message).permit(:to_number, :from_number, :content)
+  end
+
 end
