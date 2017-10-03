@@ -1,10 +1,1 @@
-<%= javascript_pack_tag 'hello-world-bundle' %>
-
-
-<div class="messages">
-  <% if @conversation %>
-    <% @conversation.messages.each do |message| %>
-      <%= react_component("Messages", props: @conversation_props, prerender: false ) %>
-    <% end %>
-  <% end %>
-</div>
+<%= react_component("Messages", props: @conversation.messages[0].to_json, prerender: false ) %>

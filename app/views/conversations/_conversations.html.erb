@@ -1,6 +1,6 @@
 <div class="conversations">
   <% @conversations.each do |conversation| %>
-    <%= link_to conversation_path(conversation), remote: true do %>
+    <%= link_to conversation_path(conversation) do %>
       <div class="conversation-tile">
         <%= conversation.customer.phone_number %>
       </div>

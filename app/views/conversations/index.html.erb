@@ -8,13 +8,13 @@
     </div>
     <!-- Messages -->
     <div class="col-sm-8 messages-container">
-      <%= render 'messages' %>
+      <%= react_component("Messages", props: @conversation, prerender: false) %>
     </div>
   </div>
   <!-- Reply  -->
   <div class="row reply-container">
     <div class="col-sm-12">
-  
+
     </div>
   </div>
 </div>

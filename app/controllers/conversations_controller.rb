@@ -7,13 +7,8 @@ class ConversationsController < ApplicationController
   end
 
   def show
-    @converstion_props = { conversation: "test" }
     @conversation = Conversation.find(params[:id])
     @message = @conversation.messages.new
-    respond_to do |format|
-      format.js
-      format.html
-    end
   end
 
 end
