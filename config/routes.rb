@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'hello_world', to: 'hello_world#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
@@ -12,8 +13,6 @@ Rails.application.routes.draw do
   resources :messages, only: [:receive] do
     collection do
       post 'receive'
-      post 'reply'
-      get 'reply'
     end
   end
 

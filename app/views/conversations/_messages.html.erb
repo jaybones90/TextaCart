@@ -1,8 +1,10 @@
+<%= javascript_pack_tag 'hello-world-bundle' %>
+
+
 <div class="messages">
   <% if @conversation %>
     <% @conversation.messages.each do |message| %>
-      <p><%= message.from_number %></p>
-      <p><%= message.content %></p>
+      <%= react_component("Messages", props: @conversation_props, prerender: false ) %>
     <% end %>
   <% end %>
 </div>
