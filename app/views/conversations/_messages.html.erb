@@ -1,5 +1,4 @@
 
 <% if @conversation %>
-  <% messages_json = @conversation.messages.map { |message| message.as_json }.to_a %>
-  <%= react_component("Messages", props: { messages: @messages.as_json }, prerender: false) %>
+  <%= react_component("Conversation", props: { messages: @messages.as_json }, prerender: false) %>
 <% end %>
