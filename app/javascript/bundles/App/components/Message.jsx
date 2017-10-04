@@ -1,11 +1,10 @@
 import React from 'react';
-import Message from './Message.jsx'
 
 /**
  * @param props - Comes from your rails view.
  */
 
-export default class Messages extends React.Component {
+export default class Message extends React.Component {
   constructor(props) {
     super(props);
 
@@ -14,14 +13,10 @@ export default class Messages extends React.Component {
 // this.state = { name: this.props.name };
   }
   render() {
-    var messages = this.props.messages.map(function(message){
-      return (
-        <Message message={message}></Message>
-      );
-    });
     return (
-      <div>
-        { messages }
+      <div key={this.props.message.id}>
+        <p>{this.props.message.from_number}</p>
+        <p>{this.props.message.content}</p>
       </div>
     );
   }
