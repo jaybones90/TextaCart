@@ -1,14 +1,28 @@
 
 
 <div class="portal">
-  <div class="row conversations-container">
+  <div class="row">
     <!-- Conversations -->
     <div class="col-sm-4">
       <%= render 'conversations' %>
     </div>
     <!-- Messages -->
     <div class="col-sm-8 messages-interface">
-      <%= render 'messages' %>
+
+      <div class="row">
+        <div class="col-12 messages-container">
+          <%= render 'messages' %>
+        </div>
+
+
+
+
+        <div class="col-12 reply-container">
+        </div>
+
+      </div>
+
+
     </div>
   </div>
 </div>

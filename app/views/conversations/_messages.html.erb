@@ -1,10 +1,9 @@
 <% if @conversation %>
-  <div class="row messages-container">
-    <div id="messages">
-      <%= render @messages %>
-    </div>
+  <div id="messages">
+    <%= render @messages %>
   </div>
-  <div class="row reply-container">
-    <%= render :template => 'messages/new' %>
-  </div>
+<% else %>
+<div class="default-message">
+  <h3> Please click on a conversation to see messages </h3>
+</div>
 <% end %>

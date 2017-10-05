@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 
-  root to: "food_carts#index"
+  root to: "pages#home"
 
   resources :conversations, only: [:index, :show] do
     resources :messages

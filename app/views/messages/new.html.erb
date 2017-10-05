@@ -1,8 +1,8 @@
 <% if @conversation %>
-  <%= form_for [@conversation, @message], remote: true do |f| %>
+  <%= form_for [@conversation, @message], class: "form-inline", remote: true do |f| %>
     <%= f.hidden_field :to_number, :value => @conversation.customer.phone_number %>
     <%= f.hidden_field :from_number, :value => @conversation.food_cart.phone_number %>
-    <%= f.text_field :content, id: "reply-input" %>
-    <%= f.submit "Send" %>
+    <%= f.text_field :content, id: "reply-input", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
+    <%= f.submit "Send", class: "btn btn-outline-primary" %>
   <% end %>
 <% end %>

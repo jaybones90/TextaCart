@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+// bootstrap overrides
+.btn-outline-primary {
+  padding: 1em 3em;
+}
+
 
 .food-cart-tile {
   border: 1px solid black;
@@ -19,25 +24,40 @@
 .conversation-tile {
   border: 1px solid black;
   padding: 1em;
-  height: 33.33%;
+  height: 25%;
+}
+
+.default-message {
+  text-align: center;
+  padding: 2em;
 }
 
 
 
 .portal {
-  .conversations-container {
-    margin-top: 3em;
-    border: 1px solid black;
+  margin-top: 3em;
+  border: 1px solid black;
+  .row {
+    margin: auto 0;
     height: 500px;
   }
-   .col-sm-4 {
-     padding: 0;
-   }
-   .reply-container {
-     border: 1px solid black;
-     height: 80px;
-   }
-   .messages-container {
-     overflow: scroll;
-   }
+  .col-sm-4, .col-sm-8, .col-12 {
+    padding: 0;
+  }
+}
+
+.messages-container {
+  height: 420px;
+ overflow: scroll;
+ #messages {
+   padding: 2em;
+ }
+}
+
+.reply-container {
+ text-align: center;
+}
+#reply-input {
+  width: 60%;
+  display: inline-block;
 }
