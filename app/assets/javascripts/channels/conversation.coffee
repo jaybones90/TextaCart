@@ -1,13 +1,10 @@
-
-
 $(document).ready ->
   $(".conversation-link").on "click", ->
     conversationId = $(this).attr('data-conversation-id')
-    alert(conversationId)
     App.conversation = App.cable.subscriptions.create({ channel: "ConversationChannel", conversation_id: conversationId},
       connected: ->
         # Called when the subscription is ready for use on the server
-        
+
       disconnected: ->
         # Called when the subscription has been terminated by the server
 

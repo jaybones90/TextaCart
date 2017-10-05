@@ -14,6 +14,9 @@ class MessagesController < ApplicationController
     conversation = Conversation.find(params[:conversation_id])
     message = conversation.messages.create!(message_params)
     message.send_message
+    respond_to do |format|
+      format.js 
+    end
   end
 
 private

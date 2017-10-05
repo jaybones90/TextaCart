@@ -1,5 +1,10 @@
 <% if @conversation %>
-  <div id="messages" data-conversation-id="<%=@conversation[:id]%>">
-    <%= render @messages %>
+  <div class="row messages-container">
+    <div id="messages">
+      <%= render @messages %>
+    </div>
+  </div>
+  <div class="row reply-container">
+    <%= render :template => 'messages/new' %>
   </div>
 <% end %>
