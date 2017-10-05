@@ -4,6 +4,10 @@
 .btn-outline-primary {
   padding: 1em 3em;
 }
+.navbar-brand {
+  font-family: "Passion One";
+  font-size: 2em;
+}
 
 
 .food-cart-tile {
@@ -53,11 +57,31 @@
    padding: 2em;
  }
 }
-
 .reply-container {
  text-align: center;
 }
 #reply-input {
   width: 60%;
   display: inline-block;
+}
+
+
+.home-intro-section {
+  margin-top: 2em;
+  text-align: center;
+  h1 {
+    font-size: 7em;
+    font-family: 'Passion One';
+  }
+  h3 {
+    font-family: "Quicksand";
+    margin-bottom: 2em;
+  }
+}
+
+.signup-form, .signin-form {
+  font-family: "Quicksand";
+  margin: 3em auto;
+  text-align: center;
+  width: 50%;
 }

@@ -1,8 +1,9 @@
-<h1>Welcome to TextaCart</h1>
-
-<h3>Allow your customers to text in their orders!</h3>
-
-<div class="signup-links">
-  <%= link_to "Sign In", new_user_session_path, remote: true %>
-  <%= link_to "Sign Up", new_user_registration_path %>
+<div class="home-intro-section">
+  <h1>TextaCart</h1>
+  <br>
+  <h3>Allow your customers to text in their orders!</h3>
+  <div class="signup-links">
+    <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-primary" %>
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-primary" %>
+  </div>
 </div>
