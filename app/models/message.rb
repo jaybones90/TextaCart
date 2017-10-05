@@ -1,4 +1,5 @@
 class Message < ApplicationRecord
+  after_create_commit { BroadcastMessageJob.perform_later self}
   require 'twilio-ruby'
   belongs_to :conversation
 

@@ -1,4 +1,5 @@
-
 <% if @conversation %>
-  <%= react_component("Conversation", props: { messages: @messages.as_json }, prerender: false) %>
+  <div id="messages" data-conversation-id="<%=@conversation[:id]%>">
+    <%= render @messages %>
+  </div>
 <% end %>
