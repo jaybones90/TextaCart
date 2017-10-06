@@ -10,9 +10,7 @@
 }
 //
 
-.pull-right {
-  text-align: right;
-}
+
 
 
 .blink_me {
@@ -101,9 +99,15 @@
 }
 
 .message {
+  font-family: "Quicksand";
   margin: 1em;
-  width: 40%;
   border-radius: 20px;
   padding: 1em;
-  background-color: rgba(0,0,0,.5)
+}
+.pull-left {
+  text-align: left;
+}
+
+.pull-right {
+  text-align: right;
 }

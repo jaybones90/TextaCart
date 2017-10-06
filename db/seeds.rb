@@ -41,7 +41,7 @@ class Seed
   end
 
   def generate_customers
-    numbers = ["+18584885368", "+16503021483", "+16508685904", "+16503028563", "+16234323432", "+16342345765", "+16503896677", "+16339998877", "+3432221111", "+16557764564"]
+    numbers = ["+18584885368", "+16503021485", "+16508685904", "+16503028563", "+16234323432", "+16342345765", "+16503896677", "+16339998877", "+3432221111", "+16557764564"]
     10.times do |i|
       customer = Customer.create!(
         name: Faker::RickAndMorty.character,
@@ -68,7 +68,7 @@ class Seed
     10.times do |i|
       Conversation.create!(
         food_cart_id: (1..2).to_a.sample,
-        customer_id: i + 1  
+        customer_id: i + 1
       )
       puts "created #{i} conversations"
     end

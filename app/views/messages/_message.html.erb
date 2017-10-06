@@ -1,11 +1,4 @@
-<% if message.from_number == "+19713024413" %>
-  <div class="message pull-right">
-    <p> <%= message.from_number %> </p>
-    <p> <%= message.content %> </p>
-  </div>
-<% else %>
-  <div class="message pull-left">
-    <p> <%= message.from_number %> </p>
-    <p> <%= message.content %> </p>
-  </div>
-<% end %>
+<div class="message <%= message.conversation.food_cart.phone_number == message.from_number ? 'pull-left' : 'pull-right' %>" >
+  <p> <%= message.from_number %> </p>
+  <p> <%= message.content %> </p>
+</div>

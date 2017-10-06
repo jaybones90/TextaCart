@@ -5,5 +5,5 @@ $(document).ready ->
       newConversation = data['conversation']
       conversationsContainer.append newConversation
       conversationsContainer.scrollTop(conversationsContainer.prop("scrollHeight"))
-      $('.conversations div:last').addClass('blink_me')
+      # $('.conversations div:last').addClass('blink_me')
   )

@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  has_many :conversations
+  has_many :conversations, dependent: :destroy
   has_many :food_carts, :through => :conversations
 
   def self.new_customer?
