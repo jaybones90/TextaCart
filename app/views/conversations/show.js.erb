@@ -1,3 +1,4 @@
 $('.messages-container').html("<%= j render('messages') %>")
 // ReactOnRails.reactOnRailsPageLoaded()
 $('.reply-container').html("<%= j render :template => 'messages/new' %>")
+$('.create-order').html("<%= j render partial:'order_link', locals: {order: @order} %> ")
