@@ -7,7 +7,5 @@ class ConversationChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def updateMessages(data)
 
-  end
 end

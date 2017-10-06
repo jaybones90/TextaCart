@@ -1,5 +1,7 @@
-// $(document).ready(function(){
-//   $('#new-message').submit(function(){
-//     $('#message_content').val("")
-//   })
-// })
+$(document).ready(function(){
+  $('.conversation-tile').click(function(){
+    if ($(this).hasClass('blink_me')) {
+      $(this).removeClass('blink_me')
+    }
+  })
+})

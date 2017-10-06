@@ -1,9 +1,5 @@
 <div class="conversations">
   <% @conversations.each do |conversation| %>
-    <%= link_to conversation_path(conversation), class: "conversation-link", data: {:'conversation-id' => conversation.id}, remote: true do %>
-      <div class="conversation-tile">
-        <%= conversation.customer.phone_number %>
-      </div>
-    <% end %>
+    <%= render conversation %>
   <% end %>
 </div>

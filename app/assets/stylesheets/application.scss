@@ -8,13 +8,24 @@
   font-family: "Passion One";
   font-size: 2em;
 }
+//
 
-
-.food-cart-tile {
-  border: 1px solid black;
-  padding: 1em;
-  margin-bottom: 1em;
+.pull-right {
+  text-align: right;
 }
+
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  75% {
+    background-color: red;
+    opacity: 25%;
+  }
+}
+
 
 .conversations {
   height: 100%;
@@ -24,19 +35,22 @@
     list-style: none;
   }
 }
-
 .conversation-tile {
+  font-family: "Quicksand";
   border: 1px solid black;
   padding: 1em;
   height: 25%;
+  overflow: hidden;
+  span {
+    text-decoration: none;
+    color: black;
+  }
 }
-
 .default-message {
   text-align: center;
   padding: 2em;
+  font-family: "Quicksand"
 }
-
-
 
 .portal {
   margin-top: 3em;
@@ -84,4 +98,12 @@
   margin: 3em auto;
   text-align: center;
   width: 50%;
+}
+
+.message {
+  margin: 1em;
+  width: 40%;
+  border-radius: 20px;
+  padding: 1em;
+  background-color: rgba(0,0,0,.5)
 }
