@@ -1,8 +1,9 @@
-<div class="messages">
-  <% if @conversation %>
-    <% @conversation.messages.each do |message| %>
-      <p><%= message.from_number %></p>
-      <p><%= message.content %></p>
-    <% end %>
-  <% end %>
+<% if @conversation %>
+  <div id="messages">
+    <%= render @messages %>
+  </div>
+<% else %>
+<div class="default-message">
+  <h3> Please click on a conversation to see messages </h3>
 </div>
+<% end %>

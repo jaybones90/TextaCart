@@ -1,0 +1,8 @@
+<% if @order %>
+  <%= form_for [@customer, @order], class: "form-inline", remote: true do |f| %>
+    <%= f.text_field :item_name %>
+    <%= f.text_field :quantity  %>
+    <%= f.text_field :price %>
+    <%= f.submit "Send", class: "btn btn-outline-primary" %>
+  <% end %>
+<% end %>

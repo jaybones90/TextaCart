@@ -8,10 +8,12 @@ class ConversationsController < ApplicationController
 
   def show
     @conversation = Conversation.find(params[:id])
+    @customer = @conversation.customer
+    @order = @customer.orders.new
+    @messages = @conversation.messages
     @message = @conversation.messages.new
     respond_to do |format|
       format.js
-      format.html
     end
   end
 

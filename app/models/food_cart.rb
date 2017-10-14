@@ -7,5 +7,8 @@ class FoodCart < ApplicationRecord
   has_many :locations
   has_many :conversations
   has_many :customers, :through => :conversations
+  has_many :orders
+  has_many :order_items, :through => :orders
+
   belongs_to :user
 end

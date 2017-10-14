@@ -1,6 +1,7 @@
 class Message < ApplicationRecord
+  after_create_commit { BroadcastMessageJob.perform_later self}
   require 'twilio-ruby'
-  belongs_to :conversation
+  belongs_to :conversation, dependent: :destroy
 
 
   def client

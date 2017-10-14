@@ -1,0 +1,8 @@
+<%= link_to conversation_path(conversation), class: "conversation-link", data: {:'conversation-id' => conversation.id}, remote: true do %>
+  <div class="conversation-tile">
+    <%= conversation.customer.phone_number %><br>
+    <% if conversation.messages.last %>
+      <span><%= conversation.messages.last.content %><span>
+    <% end %>
+  </div>
+<% end %>
